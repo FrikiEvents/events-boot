@@ -10,11 +10,11 @@ import javax.persistence.Embeddable;
 @Embeddable
 @Value
 public class Country {
-    @Column(name = "name")
+    @Column(name = "name_country")
     private String name;
-    @Column(name = "reference")
+    @Column(name = "reference_country")
     private String reference;
-    private final static int MAX_LENGTH = 75;
+    private final static int MAX_LENGTH = 100;
 
     private Country(String name, String reference) {
         this.name = name;

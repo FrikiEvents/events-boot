@@ -8,13 +8,10 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-@Value
 public class District {
-    @Column(name = "name")
     private String name;
-    @Column(name = "reference")
     private String reference;
-    private final static int MAX_LENGTH = 75;
+    private final static int MAX_LENGTH = 100;
 
     private District(String name, String reference) {
         this.name = name;

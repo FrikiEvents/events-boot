@@ -2,18 +2,21 @@ package com.frikiteam.eventsboot.domain.values;
 
 import lombok.Value;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
+import java.util.UUID;
 
 @Embeddable
-@Value
-public class PlaceId {
-    private long value;
+@Value(staticConstructor = "of")
+public class PlaceId implements Serializable {
+    private UUID value;
 
-    private PlaceId(long value) {
+    private PlaceId(UUID value) {
         this.value = value;
     }
 
     protected PlaceId() {
-        this.value = 0;
+        this.value = UUID.randomUUID();
     }
 }
