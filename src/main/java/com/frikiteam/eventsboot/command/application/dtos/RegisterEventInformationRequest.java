@@ -1,9 +1,9 @@
 package com.frikiteam.eventsboot.command.application.dtos;
 
-import lombok.Value;
+import lombok.Data;
 
 
-@Value
+@Data
 public class RegisterEventInformationRequest {
     private String eventDescription;
     private String eventImage;
