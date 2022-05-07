@@ -1,4 +1,4 @@
-package com.frikiteam.eventsboot.application.notification;
+package com.frikiteam.eventsboot.command.application.notification;
 
 public class ApplicationError {
     private String message;

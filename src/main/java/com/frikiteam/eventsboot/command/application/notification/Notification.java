@@ -1,4 +1,4 @@
-package com.frikiteam.eventsboot.application.notification;
+package com.frikiteam.eventsboot.command.application.notification;
 
 import java.util.ArrayList;
 import java.util.List;

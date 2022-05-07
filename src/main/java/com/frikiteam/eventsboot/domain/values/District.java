@@ -1,10 +1,8 @@
 package com.frikiteam.eventsboot.domain.values;
 
-import lombok.Value;
-import com.frikiteam.eventsboot.application.notification.Notification;
-import com.frikiteam.eventsboot.application.notification.Result;
+import com.frikiteam.eventsboot.command.application.notification.Notification;
+import com.frikiteam.eventsboot.command.application.notification.Result;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
