@@ -5,9 +5,12 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
-@Table(name = "events_information")
 @Entity
+@Table(name = "events_information")
+<<<<<<< HEAD
+@Entity
+=======
+>>>>>>> 9521582eeff3759e7d292c17925490a2dfff4e4d
 @Data
 public class EventInformation {
   @EmbeddedId
