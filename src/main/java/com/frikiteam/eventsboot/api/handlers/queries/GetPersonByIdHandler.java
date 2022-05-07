@@ -1,4 +1,4 @@
-package pe.edu.upc.clientsboot.application.handlers.queries;
+package com.frikiteam.eventsboot.api.handlers.queries;
 
 import org.axonframework.queryhandling.QueryHandler;
 import org.hibernate.transform.Transformers;

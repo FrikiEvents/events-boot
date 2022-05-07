@@ -1,4 +1,4 @@
-package pe.edu.upc.clientsboot.application.handlers.commands;
+package com.frikiteam.eventsboot.api.handlers.commands;
 
 import org.axonframework.commandhandling.CommandHandler;
 import org.springframework.stereotype.Component;
