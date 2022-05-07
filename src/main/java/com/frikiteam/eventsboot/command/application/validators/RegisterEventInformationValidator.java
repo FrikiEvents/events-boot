@@ -28,11 +28,11 @@ public class RegisterEventInformationValidator {
         if (eventLink.isEmpty()) {
             notification.addError("Client lastname is required");
         }
-        String startDate = registerEventInformationRequest.getStartDate() != null ? registerEventInformationRequest.getStartDate().trim() : "";
+        String startDate = registerEventInformationRequest.getStartDate() != null ? String.valueOf(registerEventInformationRequest.getStartDate()) : "";
         if (startDate.isEmpty()) {
             notification.addError("Client startDate is required");
         }
-        String endDate = registerEventInformationRequest.getEndDate() != null ? registerEventInformationRequest.getEndDate().trim() : "";
+        String endDate = registerEventInformationRequest.getEndDate() != null ? String.valueOf(registerEventInformationRequest.getEndDate()) : "";
         if (endDate.isEmpty()) {
             notification.addError("Client endDate is required");
         }

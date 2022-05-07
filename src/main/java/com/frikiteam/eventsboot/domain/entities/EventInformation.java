@@ -29,4 +29,17 @@ public class EventInformation {
 
   @Column(name = "end_date")
   private LocalDateTime EndDate;
+
+  public EventInformation(EventId id, String eventDescription, String eventImage, String eventLink, LocalDateTime startDate, LocalDateTime endDate) {
+    this.id = id;
+    EventDescription = eventDescription;
+    EventImage = eventImage;
+    EventLink = eventLink;
+    StartDate = startDate;
+    EndDate = endDate;
+  }
+
+  public EventInformation() {
+
+  }
 }
