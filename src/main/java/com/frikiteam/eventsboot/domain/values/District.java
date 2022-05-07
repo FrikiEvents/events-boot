@@ -2,12 +2,17 @@ package com.frikiteam.eventsboot.domain.values;
 
 import com.frikiteam.eventsboot.command.application.notification.Notification;
 import com.frikiteam.eventsboot.command.application.notification.Result;
+import lombok.Value;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
+@Value
 public class District {
+    @Column(name = "name_district")
     private String name;
+    @Column(name = "reference_district")
     private String reference;
     private final static int MAX_LENGTH = 100;
 
