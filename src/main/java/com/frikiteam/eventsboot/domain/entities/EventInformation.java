@@ -1,11 +1,13 @@
 package com.frikiteam.eventsboot.domain.entities;
 
 import com.frikiteam.eventsboot.domain.values.EventId;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
+@Entity
 @Table(name = "events_information")
+@Data
 public class EventInformation {
   @EmbeddedId
   @AttributeOverrides({
