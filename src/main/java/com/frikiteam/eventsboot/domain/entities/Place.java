@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Entity(name = "Place")
 @Table(name = "places")
 @Data
-
 public class Place {
   @AggregateIdentifier
   @EmbeddedId
@@ -48,10 +47,16 @@ public class Place {
 
   }
 
-  public Place(PlaceId id, District district, AuditTrail auditTrail, String name) {
-    setId(id);
+  public Place(PlaceId placeid, District district, Country country, City city, AuditTrail auditTrail, String placeName) {
+    setId(placeid);
     setDistrict(district);
     setAuditTrail(auditTrail);
-    setName(name);
+    setName(placeName);
+    setAuditTrail(auditTrail);
+    setCountry(country);
+    setCity(city);
   }
+
+
+
 }

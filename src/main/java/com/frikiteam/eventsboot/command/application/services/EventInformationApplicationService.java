@@ -41,8 +41,8 @@ public class EventInformationApplicationService {
             registerEventInformationRequest.getEventDescription().trim(),
             registerEventInformationRequest.getEventImage().trim(),
             registerEventInformationRequest.getEventLink().trim(),
-            registerEventInformationRequest.getStartDate().trim(),
-            registerEventInformationRequest.getEndDate().trim()
+            registerEventInformationRequest.getStartDate(),
+            registerEventInformationRequest.getEndDate()
         );
         CompletableFuture<Object> future = commandGateway.send(registerEventInformation);
         CompletableFuture<ResultType> futureResult = future.handle((ok, ex) -> (ex != null) ? ResultType.FAILURE : ResultType.SUCCESS);

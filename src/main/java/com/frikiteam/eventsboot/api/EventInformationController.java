@@ -6,6 +6,7 @@ import com.frikiteam.eventsboot.command.application.dtos.RegisterEventInformatio
 import com.frikiteam.eventsboot.command.application.notification.Notification;
 import com.frikiteam.eventsboot.command.application.notification.Result;
 import com.frikiteam.eventsboot.command.application.services.EventInformationApplicationService;
+import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
