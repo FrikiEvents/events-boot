@@ -6,7 +6,6 @@ public class PlaceView {
     private String referenceCity;
     private String nameCountry;
     private String referenceCountry;
-    private String endDate;
     private String nameDistrict;
     private String referenceDistrict;
     private String name;

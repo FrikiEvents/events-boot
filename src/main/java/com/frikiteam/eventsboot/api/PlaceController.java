@@ -1,6 +1,7 @@
 package com.frikiteam.eventsboot.api;
 
 import com.frikiteam.eventsboot.command.application.dtos.EventInformationView;
+import com.frikiteam.eventsboot.command.application.dtos.PlaceView;
 import com.frikiteam.eventsboot.command.application.dtos.RegisterPlaceRequest;
 import com.frikiteam.eventsboot.command.application.dtos.RegisterPlaceResponse;
 
@@ -36,5 +37,16 @@ public class PlaceController {
         }
     }
 
+    @GetMapping(path = "/id/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    //@ApiOperation(value = "Get client person by id", response = EventInformationView.class)
+    public ResponseEntity<Object> getById(@PathVariable("id") String id) {
+        try {
+            PlaceView personView = placeApplicationServicee.getById(id);
+            return ApiController.ok(personView);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return ApiController.serverError();
+        }
+    }
 
 }

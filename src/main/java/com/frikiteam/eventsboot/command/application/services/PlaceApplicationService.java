@@ -4,10 +4,13 @@ import com.frikiteam.eventsboot.command.application.commands.RegisterPlace;
 import com.frikiteam.eventsboot.command.application.notification.Notification;
 import com.frikiteam.eventsboot.command.application.notification.Result;
 
+import com.frikiteam.eventsboot.command.application.queries.GetEventInformationByIdQuery;
+import com.frikiteam.eventsboot.command.application.queries.GetPlaceByIdQuery;
 import com.frikiteam.eventsboot.command.application.validators.RegisterPlaceValidator;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
 
+import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.stereotype.Component;
 
@@ -62,6 +65,13 @@ public class PlaceApplicationService {
 
         return Result.success(registerPlaceResponse);
     }
-
-
+    public PlaceView getById(String placeId) throws Exception {
+        CompletableFuture<PlaceView> future = queryGateway.query(new GetPlaceByIdQuery(placeId), ResponseTypes.instanceOf(PlaceView.class));
+        CompletableFuture<ResultType> futureResult = future.handle((ok, ex) -> (ex != null) ? ResultType.FAILURE : ResultType.SUCCESS);
+        ResultType resultType = futureResult.get();
+        if (resultType == ResultType.FAILURE) {
+            throw new Exception();
+        }
+        return future.get();
+    }
 }
