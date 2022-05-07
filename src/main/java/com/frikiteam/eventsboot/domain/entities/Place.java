@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Entity(name = "Place")
 @Table(name = "places")
 @Data
-
 public class Place {
   @AggregateIdentifier
   @EmbeddedId

@@ -3,6 +3,8 @@ package com.frikiteam.eventsboot.command.application.commands;
 import lombok.Value;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
+import java.time.LocalDateTime;
+
 @Value
 public class RegisterEventInformation {
     @TargetAggregateIdentifier
@@ -10,6 +12,6 @@ public class RegisterEventInformation {
     private String eventDescription;
     private String eventImage;
     private String eventLink;
-    private String startDate;
-    private String endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
 }
