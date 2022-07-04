@@ -12,10 +12,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/eventinformations")
+@RequestMapping("/event-information")
 
 public class EventInformationController {
-    private final EventInformationApplicationService personApplicationService;
+    /*private final EventInformationApplicationService personApplicationService;
 
     public EventInformationController(EventInformationApplicationService personApplicationService) {
         this.personApplicationService = personApplicationService;
@@ -44,5 +44,5 @@ public class EventInformationController {
             e.printStackTrace();
             return ApiController.serverError();
         }
-    }
+    }*/
 }

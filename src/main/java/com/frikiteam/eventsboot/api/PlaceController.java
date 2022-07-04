@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/places")
 
 public class PlaceController {
-    private final PlaceApplicationService placeApplicationServicee;
+    /*private final PlaceApplicationService placeApplicationServicee;
 
     public PlaceController(PlaceApplicationService pageApplicationService) {
         this.placeApplicationServicee = pageApplicationService;
@@ -35,9 +35,9 @@ public class PlaceController {
         } catch(Exception e) {
             return ApiController.serverError();
         }
-    }
+    }*/
 
-    @GetMapping(path = "/id/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+/*    @GetMapping(path = "/id/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     //@ApiOperation(value = "Get client person by id", response = EventInformationView.class)
     public ResponseEntity<Object> getById(@PathVariable("id") String id) {
         try {
@@ -47,6 +47,6 @@ public class PlaceController {
             e.printStackTrace();
             return ApiController.serverError();
         }
-    }
+    }*/
 
 }

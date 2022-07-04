@@ -12,12 +12,11 @@ public class SwaggerConfig {
   @Bean
   public OpenAPI springShopOpenAPI() {
     return new OpenAPI()
-        .info(new Info().title("Events Microservice")
-            .description("Customers microservice")
+        .info(new Info().title("Requests Microservice")
+            .description("Requests microservice: Where employees make their requests to register their trips")
             .version("1.0.0")
             .license(new License().name("Apache 2.0").url("http://springdoc.org")))
             .externalDocs(new ExternalDocumentation()
-            .description("Events Microservice developed with Java and Spring Boot")
-            .url("https://github.com/FrikiEvents/events-boot"));
+            .description("Requests Microservice developed with Java and Spring Boot"));
   }
 }

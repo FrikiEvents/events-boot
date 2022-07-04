@@ -1,6 +1,5 @@
 package com.frikiteam.eventsboot.command.application.handlers;
 
-import com.frikiteam.eventsboot.command.application.commands.RegisterEventInformation;
 import com.frikiteam.eventsboot.command.application.commands.RegisterPlace;
 import com.frikiteam.eventsboot.command.application.notification.Notification;
 import com.frikiteam.eventsboot.command.application.notification.Result;
